@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Lab02_3 {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Year: ");
         int year = scanner.nextInt();
         System.out.print("Month: ");

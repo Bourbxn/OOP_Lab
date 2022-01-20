@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Lab02_4 {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the first city: ");
         String firstCity = scanner.nextLine();
         System.out.print("Enter the second city: ");
@@ -33,15 +33,5 @@ public class Lab02_4 {
             third = firstCity;
         }
         System.out.println("The three cities in alphabetical order are " + first + " " + second + " " + third);
-        System.out.println(first + second + third);
     }
 }
-
-/*
-
-Enter the first city: Chicago <Enter>
-Enter the second city: Los Angeles <Enter>
-Enter the third city: Atlanta <Enter>
-The three cities in alphabetical order are Atlanta Chicago Los Angeles
-
- */

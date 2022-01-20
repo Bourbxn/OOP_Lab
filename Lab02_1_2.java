@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Lab02_1_2 {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter today's day: ");
         int day = scanner.nextInt();
         System.out.print("Enter the number of days elapsed since today: ");

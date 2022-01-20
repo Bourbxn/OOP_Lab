@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Lab02_5 {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         boolean inputError;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter number between 1 and 15: ");
+        System.out.print("Enter the number of lines: ");
         int num = scanner.nextInt();
         if(num<1 || num>15) inputError = true;
         else inputError = false;

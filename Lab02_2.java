@@ -2,9 +2,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Lab02_2 {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
         boolean error;
-        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         System.out.print("scissor (0), rock (1), paper (2): ");
         int numPlayerSRP = scanner.nextInt();
