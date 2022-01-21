@@ -5,6 +5,10 @@ public class Lab02_1_2 {
     public static void main(String[] args){
         System.out.print("Enter today's day: ");
         int day = scanner.nextInt();
+        if(day < 0 || day>6) {
+            System.out.println("INPUT ERROR!");
+            System.exit(0);
+        }
         System.out.print("Enter the number of days elapsed since today: ");
         int dayElapsed = scanner.nextInt();
         int dayCurrent = (day + dayElapsed)%7;
