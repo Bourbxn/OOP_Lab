@@ -6,11 +6,18 @@ class Account {
     private double annualInterestRate;
     private Date dateCreated;
 
-    public Account(int id,double balance,double annualInterestRate,Date dateCreated){ 
+    public Account(){
+        this.id = 0;
+        this.balance = 0;
+        this.annualInterestRate = 0;
+        this.dateCreated = new java.sql.Date(System.currentTimeMillis());
+    }
+
+    public Account(int id,double balance,double annualInterestRate){ 
         this.id = id;
         this.balance = balance;
         this.annualInterestRate = annualInterestRate;
-        this.dateCreated = dateCreated;
+        this.dateCreated = new java.sql.Date(System.currentTimeMillis());;
     }
 
     public Double getMonthlyInterestRate(){

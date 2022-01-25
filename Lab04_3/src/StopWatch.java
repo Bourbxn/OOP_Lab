@@ -2,7 +2,9 @@ class StopWatch {
     private Long startTime;
     private Long endTime;
     
-    public StopWatch(){}
+    public StopWatch(){
+
+    }
 
     public void start(){
         this.startTime = System.currentTimeMillis();
