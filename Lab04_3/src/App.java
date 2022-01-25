@@ -1,7 +1,14 @@
 import java.lang.Math;
 
 public class App {
-    //Palindrome Prime 
+    //Main
+    public static void main(String[] args) throws Exception {
+        displayElements();
+        for(int i=0;i<60;i++) System.out.print("-");
+        displayPalindromePrime();
+    }
+
+     //Palindrome Prime 
     public static boolean checkPrime(int num){
         int factor = 0;
         for(int i = 1;i<=num;i++){
@@ -106,10 +113,4 @@ public class App {
         System.out.printf("The sort time is %.1f milliseconds.\n",elapsedTimeDouble);
     }
 
-    //Main
-    public static void main(String[] args) throws Exception {
-        displayElements();
-        for(int i=0;i<60;i++) System.out.print("-");
-        displayPalindromePrime();
-    }
 }
