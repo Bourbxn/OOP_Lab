@@ -8,11 +8,11 @@ public class App {
     public static void main(String[] args) throws Exception {
         for(int i=0;i<10;i++) accounts[i] = new Account();
         while(true){
-            displayATM();
+            renderATM();
         }
     }
 
-    public static void displayATM(){
+    public static void renderATM(){
         if(!login){
             System.out.print("Enter an id: ");
             id = scanner.nextInt();
@@ -30,27 +30,31 @@ public class App {
             System.out.println("4: exit");
             System.out.print("Enter a choice: ");
             int choice = scanner.nextInt();
-            if(choice==1) {
-                System.out.println("The balance is "+ accounts[id].checkBalance());
-                System.out.println();
-            }
-            else if(choice==2){
-                System.out.print("Enter an amout to withdraw: ");
-                double amount = scanner.nextDouble();
-                accounts[id].withdraw(amount);
-                System.out.println();
-            }
-            else if(choice==3){
-                System.out.print("Enter an amout to deposit: ");
-                double amount = scanner.nextDouble();
-                accounts[id].deposit(amount);
-                System.out.println();
-            }
-            else if(choice==4){
-                System.out.println("End of Program.\n");
-                login = false;
-            }
-            else System.out.println("INPUT ERROR!\n");
+            choiceSelection(choice);
         }
+    }
+
+    public static void choiceSelection(int choice){
+        if(choice==1) {
+            System.out.println("The balance is "+ accounts[id].checkBalance());
+            System.out.println();
+        }
+        else if(choice==2){
+            System.out.print("Enter an amout to withdraw: ");
+            double amount = scanner.nextDouble();
+            accounts[id].withdraw(amount);
+            System.out.println();
+        }
+        else if(choice==3){
+            System.out.print("Enter an amout to deposit: ");
+            double amount = scanner.nextDouble();
+            accounts[id].deposit(amount);
+            System.out.println();
+        }
+        else if(choice==4){
+            System.out.println("End of Program.\n");
+            login = false;
+        }
+        else System.out.println("INPUT ERROR!\n");
     }
 }
