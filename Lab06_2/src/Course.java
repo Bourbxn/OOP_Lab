@@ -1,5 +1,0 @@
-class Course {
-    public Course(){
-        
-    }
-}
