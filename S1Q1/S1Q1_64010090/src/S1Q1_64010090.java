@@ -30,7 +30,7 @@ public class S1Q1_64010090 {
             System.out.println("INPUT ERROR!");
             System.exit(0);
         }
-        System.out.println("The selected member is "+matrix[rowSelect][columnSelect]);
+        System.out.println("The selected member is " + matrix[rowSelect][columnSelect]);
         memberOnTop(matrix, size, rowSelect, columnSelect);
         memberOnRight(matrix, size, rowSelect, columnSelect);
         memberAtBottom(matrix, size, rowSelect, columnSelect);
@@ -78,5 +78,4 @@ public class S1Q1_64010090 {
         if(column==0) System.out.print("NO");
         System.out.println();
     }
-
 }
