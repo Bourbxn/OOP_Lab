@@ -2,7 +2,7 @@ import java.util.GregorianCalendar;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        GregorianCalendar greCal = new GregorianCalendar();
+        GregorianCalendar greCal = new GregorianCalendar(2021,0,31);
         System.out.println("current year, month, date, and day of week");
         System.out.println("Year is " + greCal.get(GregorianCalendar.YEAR));
         System.out.println("Month is " + greCal.get(GregorianCalendar.MONTH));

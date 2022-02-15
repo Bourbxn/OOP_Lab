@@ -5,6 +5,6 @@ public class App {
         System.out.println("Name: " + stock.getName());
         System.out.println("Previous Closing Price: " + stock.getPreviousPrice());
         System.out.println("Current Price: " + stock.getCurrentPrice());
-        System.out.println("Price Change: " + stock.getPercentChange());
+        System.out.println("Price Change: " + stock.getPercentChange() + " %");
     }
 }

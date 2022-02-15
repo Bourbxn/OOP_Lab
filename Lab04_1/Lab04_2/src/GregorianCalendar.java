@@ -1,5 +1,0 @@
-class GregorianCalendar {
-    public GregorianCalendar(){
-        
-    }
-}

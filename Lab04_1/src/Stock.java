@@ -1,10 +1,10 @@
 class Stock {
     private String symbol;
     private String name;
-    private Double previousClosingPrice;
-    private Double currentPrice;
+    private double previousClosingPrice;
+    private double currentPrice;
 
-    public Stock(String symbol,String name,Double previousPrice,Double currentPrice){
+    public Stock(String symbol,String name,double previousPrice,double currentPrice){
         this.symbol = symbol;
         this.name = name;
         this.previousClosingPrice = previousPrice;
@@ -19,15 +19,15 @@ class Stock {
         return this.name;
     }
 
-    public Double getPreviousPrice(){
+    public double getPreviousPrice(){
         return this.previousClosingPrice;
     }
 
-    public Double getCurrentPrice(){
+    public double getCurrentPrice(){
         return this.currentPrice;
     }
 
-    public Double getPercentChange(){
-        return ((this.currentPrice-this.previousClosingPrice)/this.currentPrice)*100;
+    public double getPercentChange(){
+        return ((this.currentPrice-this.previousClosingPrice)/this.previousClosingPrice)*100;
     }
 }
