@@ -27,12 +27,48 @@ class RegularPolygon {
         this.y = y; 
     }
 
+    //Setter
+
+    public void setN(int n){
+        this.n = n;
+    }
+
+    public void setSide(double side){
+        this.side = side;
+    }
+
+    public void setX(double x){
+        this.x = x;
+    }
+
+    public void setY(double y){
+        this.y = y;
+    }
+
+    //Getter
+
     public double getPerimeter(){
         return side*n;
     }
 
     public double getArea(){
         return (n*side*side)/(4*(Math.tan(Math.PI/n)));
+    }
+
+    public int getN(){
+        return n;
+    }
+
+    public double getSide(){
+        return side;
+    }
+    
+    public double getX(){
+        return x;
+    }
+    
+    public double getY(){
+        return y;
     }
 
 

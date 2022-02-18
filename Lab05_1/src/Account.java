@@ -20,12 +20,32 @@ class Account {
         this.dateCreated = new java.sql.Date(System.currentTimeMillis());;
     }
 
+    //Setter
+
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setBalance(double balance){
+        this.balance = balance;
+    }
+
+    public void setAnnualInterestRate(double annualInterestRate){
+        this.annualInterestRate = annualInterestRate;
+    }
+
+    public void setDateCreated(Date dateCreated){
+        this.dateCreated = dateCreated;
+    }
+
+    //Getter
+
     public Double getMonthlyInterestRate(){
         return this.annualInterestRate/12;        
     }
 
     public Double getMonthlyInterest(){
-        return (this.annualInterestRate/12)*this.balance;
+        return ((this.annualInterestRate/12)*this.balance)/100;
     }
 
     public Double getBalance(){
@@ -36,11 +56,27 @@ class Account {
         return this.dateCreated;
     }
 
+    public int getID(){
+        return this.id;
+    }
+
+    //Method
+
     public void withdraw(double withdraw){
-        this.balance -= withdraw;
+        if(withdraw<0){
+            System.out.println("INPUT ERROR");
+        }
+        else{
+            this.balance -= withdraw;
+        }
     }
 
     public void deposit(double deposit){
-        this.balance += deposit;
+        if(deposit<0){
+            System.out.println("INPUT ERROR");
+        }
+        else{
+            this.balance += deposit;
+        }   
     }
 }
