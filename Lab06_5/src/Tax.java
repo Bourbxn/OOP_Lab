@@ -1,4 +1,4 @@
-class ComputeTax {
+class Tax {
     private double[] rates = {0.10, 0.15, 0.25, 0.28, 0.33, 0.35};
     private int[][] brackets = {
         {8350, 33950, 82250, 171550, 372950}, 
@@ -9,7 +9,7 @@ class ComputeTax {
     private double amount;
     private double tax;
 
-    public ComputeTax(int choose,double amount){
+    public Tax(int choose,double amount){
         this.amount = amount;
         if(amount <= brackets[choose][0]){
             tax = amount*rates[0];
