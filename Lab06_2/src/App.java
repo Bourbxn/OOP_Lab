@@ -4,7 +4,7 @@ public class App {
         course.add("A");
         course.add("B");
         course.add("C");
-        course.remove("B");
+        course.dropStudent("B");
         course.displayStudents();
     }
 }
