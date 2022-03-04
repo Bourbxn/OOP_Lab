@@ -4,28 +4,10 @@ class LiquorStore {
     private String[][] liquor;
     private String[][] temp;
     private int size;
-    static String address = "101 Jack Street";
 
     public LiquorStore(String name, double balance) {
         this.name = name;
         this.balance = balance;
-        this.size = 3;
-
-        liquor = new String[3][size];
-        liquor[0][0] = "Blend285";
-        liquor[0][1] = "SangSom";
-        liquor[0][2] = "Red Label";
-        liquor[1][0] = "0";
-        liquor[1][1] = "0";
-        liquor[1][2] = "0";
-        liquor[2][0] = "280";
-        liquor[2][1] = "250";
-        liquor[2][2] = "400";
-    }
-
-    public LiquorStore() {
-        this.name = "Admin";
-        this.balance = 10000;
         this.size = 3;
         liquor = new String[3][size];
         liquor[0][0] = "Blend285";

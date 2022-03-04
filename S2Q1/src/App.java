@@ -4,6 +4,7 @@ public class App {
     static Scanner scanner = new Scanner(System.in);
     static Scanner scannerStr = new Scanner(System.in);
     static boolean mainMenu = true;
+    static LiquorStore liquorStore = new LiquorStore("Boss", 10000);
 
     public static void main(String[] args) throws Exception {
         while (true) {
@@ -19,8 +20,6 @@ public class App {
     }
 
     public static void showDisplay() {
-        LiquorStore liquorStore = new LiquorStore();
-        liquorStore.setName("Boss");
         System.out.println("*** Liquor Store Management ***");
         System.out.println("[0] Add Liquor Brand");
         System.out.println("[1] Import Liquor");
