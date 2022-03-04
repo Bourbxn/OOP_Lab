@@ -4,11 +4,13 @@ class LiquorStore {
     private String[][] liquor;
     private String[][] temp;
     private int size;
+    static String address = "101 Jack Street";
 
     public LiquorStore(String name, double balance) {
         this.name = name;
         this.balance = balance;
         this.size = 3;
+
         liquor = new String[3][size];
         liquor[0][0] = "Blend285";
         liquor[0][1] = "SangSom";
