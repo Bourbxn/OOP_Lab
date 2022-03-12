@@ -1,4 +1,4 @@
-public class Person {
+class Person {
     private String name;
     private String address;
     private String phoneNumber;
@@ -46,4 +46,24 @@ public class Person {
     public String getEmailAddress(){
         return emailAddress;
     }
+
+    public String toString(){
+        return "Person{name="+name+", "+
+        "address="+address+", "+
+        "phoneNumber="+phoneNumber+", "+
+        "email="+emailAddress+"}\n";
+    }
+
+    //function
+    public void renderPerson(){
+        System.out.println("Name: "+name);
+        System.out.println("Address: "+address);
+        System.out.println("Phone: "+phoneNumber);
+        System.out.println("Email: "+emailAddress);
+    }
+
+    public void renderPersonT(){
+        System.out.println("Person");
+    }
+
 }
