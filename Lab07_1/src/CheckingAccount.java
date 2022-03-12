@@ -1,23 +1,29 @@
-class Checking extends Account{
+class CheckingAccount extends Account {
     private double overdraftLimit;
-    private String overdraftLimitStr;
-    public Checking(double overdraftLimit){
-        this.overdraftLimit = overdraftLimit;
+
+    public CheckingAccount(int id, double balance, double annualInterestRate) {
+        super(id, balance, annualInterestRate);
+        this.overdraftLimit = balance;
     }
 
-    //setter
-    public void setOverdraftLimit(double overdraftLimit){
-        this.overdraftLimit = overdraftLimit;
-        overdraftLimitStr = String.format("Overdraft Limit: %.2f",overdraftLimit);
-    }
-
-    //getter
-    public double getOverdraftLimit(){
+    // getter
+    public double getOverdraftLimit() {
         return overdraftLimit;
     }
 
-    //function
-    public String toString(){
-        return overdraftLimitStr;
+    public String toString() {
+        String transaction = new String("");
+        if (getTotalWithdraw() > 0) {
+            transaction += ("Withdraw: " + String.format("%.2f", getTotalWithdraw()) + "\n");
+        }
+        if (getTotalDeposit() > 0) {
+            transaction += ("Deposit: " + String.format("%.2f", getTotalDeposit()) + "\n");
+        }
+        return "Checking Account\n" +
+                "Overdraft Limit: " + String.format("%.2f", overdraftLimit) + "\n" +
+                "Balance is " + String.format("%.2f", getBalance()) + "\n" +
+                transaction +
+                "Balance is " + String.format("%.2f", getLastBalance()) + "\n" +
+                "This account was created at " + String.format("%tc", getDateCreated());
     }
 }
