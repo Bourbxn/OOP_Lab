@@ -1,5 +1,15 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Octagon octagonA = new Octagon(8,"Blue",true);
+        System.out.println(octagonA);
+        System.out.println();
+
+        Octagon octagonB = new Octagon();
+        octagonB.clone(octagonA);
+        System.out.println(octagonB); 
+        System.out.println();
+
+        if(octagonA.compareTo(octagonB)==0) System.out.println("OctagonA and OctagonB are equal.");
+        else System.out.println("OctagonA and OctagonB are NOT equal");
     }
 }
