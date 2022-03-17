@@ -4,7 +4,7 @@ public class App {
         System.out.println(octagonA);
         System.out.println();
 
-        Octagon octagonB = new Octagon();
+        Octagon octagonB = new Octagon(10,"Brown",true);
         octagonB.clone(octagonA);
         System.out.println(octagonB); 
         System.out.println();
