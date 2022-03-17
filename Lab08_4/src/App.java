@@ -13,5 +13,3 @@ public class App {
         else System.out.println("OctagonA and OctagonB are NOT equal");
     }
 }
-
-//Test Git
