@@ -1,14 +1,7 @@
 class SavingsAccount extends Account {
-    private double overdraftLimit;
 
     public SavingsAccount(int id, double balance, double annualInterestRate) {
         super(id, balance, annualInterestRate);
-        this.overdraftLimit = balance;
-    }
-
-    // getter
-    public double getOverdraftLimit() {
-        return overdraftLimit;
     }
 
     public String toString() {
@@ -27,8 +20,7 @@ class SavingsAccount extends Account {
         } else {
             aboutBalance += "Balance is " + String.format("%.2f", getLastBalance()) + "\n";
         }
-        return "Checking Account\n" +
-                "Overdraft Limit: " + String.format("%.2f", overdraftLimit) + "\n" +
+        return "Saving Account\n" +
                 "Balance is " + String.format("%.2f", getBalance()) + "\n" +
                 transaction +
                 aboutBalance +

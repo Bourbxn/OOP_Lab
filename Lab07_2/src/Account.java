@@ -1,24 +1,19 @@
 import java.util.Date;
+import java.util.ArrayList;
 
 class Account {
     private String name;
     private String id;
     private double balance;
-    private String[][] transactions;
-    private String[][] temp;
-    private Date transactionDate;
-    private String dateStr;
-    private String typeStr;
-    private String amountStr;
-    private String balanceStr;
-    int size;
-    public Account(String name,String id,double balance){
+    private double annualInterestRate;
+    ArrayList<Transaction> transactions = new ArrayList<Transaction>();
+
+    
+    public Account(String name,String id,double balance,double annualInterestRate){
         this.name = name;
         this.id = id;
         this.balance = balance;
-        this.size = 0;
-        transactions = new String[4][this.size];
-        temp = new String[4][this.size];
+        this.annualInterestRate = annualInterestRate;
     }
 
     //setter
@@ -37,56 +32,24 @@ class Account {
 
     //function
     public void withdraw(double withdraw){
-
-        this.balance -= withdraw;
-        transactionDate = new Date();
-        dateStr = transactionDate.toString();
-        typeStr = new String("W");
-        amountStr = String.format("%.2f", withdraw);
-        balanceStr = String.format("%.2f", balance);
-        if(this.balance<0){
-            this.balance+=withdraw;
-            typeStr = new String("ERROR");
-            amountStr = new String("ERROR");
-            balanceStr = new String("ERROR");
+        if(withdraw>0){
+            balance -= withdraw;
+            this.transactions.add(new Transaction('W',withdraw,balance,""));
         }
-        saveTransactions(dateStr, typeStr, amountStr, balanceStr);
+
+        
     }
 
     public void deposit(double deposit){
-        this.balance += deposit;
-        transactionDate = new Date();
-        dateStr = transactionDate.toString();
-        typeStr = new String("D");
-        amountStr = String.format("%.2f", deposit);
-        balanceStr = String.format("%.2f", balance);
-        saveTransactions(dateStr, typeStr, amountStr, balanceStr);
-    }
-
-    public void saveTransactions(String currentDate,String type,String amount,String balanceLeft){
-        temp = new String[4][size];
-        for(int i=0;i<4;i++){
-            for(int j=0;j<size;j++){
-                temp[i][j]=transactions[i][j];
-            }
-        }
-        size++;
-        transactions = new String[4][size];
-        for(int i=0;i<4;i++){
-            for(int j=0;j<size;j++){
-                if(j==size-1){
-                    if(i==0) transactions[i][j] = currentDate;
-                    else if(i==1) transactions[i][j] = type;
-                    else if(i==2) transactions[i][j] = amount;
-                    else if(i==3) transactions[i][j] = balanceLeft;
-                }
-                else transactions[i][j] = temp[i][j];
-            }
-        }
+       if(deposit>0){
+            balance += deposit;
+            this.transactions.add(new Transaction('D',deposit,balance,""));
+       }
     }
 
 
     //getter
+
     public void getName(String name){
         this.name = name;
     }
@@ -99,20 +62,19 @@ class Account {
         this.balance = balance;
     }
 
-    //render
+    // render
     public void showTransactions(){
         System.out.println("Name: "+name);
         System.out.println("Account ID: "+id);
-        System.out.println("Annual interest rate: 1.65");
+        System.out.println("Annual interest rate: " + annualInterestRate);
         System.out.printf("Balance: %.2f\n",balance);
         System.out.println("Date\t\t\t\tType\t\tAmount\t\tBalance");
-        for(int i=0;i<size;i++){
-            for(int j=0;j<4;j++){
-                System.out.print(transactions[j][i]);
-                if(j==0) System.out.print("\t");
-                else if(j==1 || j==2 || j==3) System.out.print("\t\t"); 
-            }
-            System.out.println();
+        for(int i=0;i<transactions.size();i++){
+            Transaction ts = transactions.get(i);
+            System.out.println(ts.getDate() + "\t" +
+                ts.getType() +  "\t\t" +
+                ts.getAmount() +  "\t\t" +
+                ts.getBalance());
         }
     }
 }
