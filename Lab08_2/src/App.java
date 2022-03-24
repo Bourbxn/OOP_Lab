@@ -10,6 +10,7 @@ public class App {
         for(int i=0;i<5;i++){
             System.out.println("Square "+(i+1));
             System.out.println(square[i]);
+            square[i].howToColor();
             System.out.println();
         }
     }
