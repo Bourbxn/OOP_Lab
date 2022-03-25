@@ -27,7 +27,8 @@ class Triangle extends GeometricObject{
 	}
 
 	public String toString(){
-		return super.toString() + "\nPerimeter: " + String.format("%.2f",getPerimeter())+
+		return super.toString() + "Triangle: side1 = " + sideA + 
+		" side2 = " + sideB + " side3 = " + sideC + "\nPerimeter: " + String.format("%.2f",getPerimeter())+
 		"\nArea: "+String.format("%.2f",getArea());
 	}
 }

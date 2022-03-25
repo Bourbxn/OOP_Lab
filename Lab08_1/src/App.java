@@ -5,11 +5,11 @@ public class App {
     static Scanner scannerBool = new Scanner(System.in);
     static Scanner scannerStr = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
-        System.out.print("Enter side A: ");
+        System.out.print("Enter side 1: ");
         double sideA = scanner.nextDouble();
-        System.out.print("Enter side B: ");
+        System.out.print("Enter side 2: ");
         double sideB = scanner.nextDouble();
-        System.out.print("Enter side C: ");
+        System.out.print("Enter side 3: ");
         double sideC = scanner.nextDouble();
         System.out.print("Enter color: ");
         String color = scannerStr.nextLine();
