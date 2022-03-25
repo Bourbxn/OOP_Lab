@@ -34,9 +34,13 @@ class Account {
     public void withdraw(double withdraw){
         if(withdraw>0){
             balance -= withdraw;
-            this.transactions.add(new Transaction('W',withdraw,balance,""));
+            if(balance>=0){
+                this.transactions.add(new Transaction('W',withdraw,balance,""));
+            }
+            else{
+                balance+=withdraw;
+            }
         }
-
         
     }
 
