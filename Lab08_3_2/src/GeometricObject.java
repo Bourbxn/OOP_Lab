@@ -23,7 +23,7 @@ abstract class GeometricObject{
 		this.color = color;
 	}
 
-	public void setFilled(){
+	public void setFilled(boolean filled){
 		this.filled = filled;
 	}
 
@@ -48,8 +48,6 @@ abstract class GeometricObject{
 	abstract public double getRadius();
 	abstract public double getWidth();
 	abstract public double getHeight();
-	abstract public String getType();
-	abstract public String getMax();
 
 	@Override
 	public String toString(){

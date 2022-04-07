@@ -69,12 +69,4 @@ class Rectangle extends GeometricObject implements Comparable{
 		"\nPerimeter: " + String.format("%.2f",getPerimeter()) +
 		"\nArea: " + String.format("%.2f",getArea());
 	}
-
-	public String getType(){
-		return "rectangle";
-	}
-
-	public String getMax(){
-		return String.format("width and height are %.1f, %.1f",getWidth(),getHeight());
-	}
 }

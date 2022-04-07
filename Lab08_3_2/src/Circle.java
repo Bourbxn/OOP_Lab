@@ -63,12 +63,4 @@ class Circle extends GeometricObject implements Comparable{
 		"\nPerimeter: " + String.format("%.2f",getPerimeter()) +
 		"\nArea: " + String.format("%.2f",getArea());
 	}
-
-	public String getType(){
-		return "circle";
-	}	
-
-	public String getMax(){
-		return String.format("radius is %.1f",getRadius());
-	}
 }
