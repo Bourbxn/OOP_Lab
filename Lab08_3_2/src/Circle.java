@@ -42,7 +42,7 @@ class Circle extends GeometricObject implements Comparable{
 
 	//setter
 
-	public void setRadius(double width){
+	public void setRadius(double radius){
 		this.radius = radius;
 	}
 
