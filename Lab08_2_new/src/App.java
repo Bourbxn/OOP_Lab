@@ -25,6 +25,7 @@ public class App {
     GeometricObject RectangleB = new Rectangle(Double.parseDouble(WHRectangleB[0]),
         Double.parseDouble(WHRectangleB[1]));
     max(RectangleA, RectangleB);
+    System.out.println("------------------------");
     System.out.printf("The max rectangle's width and height are %.1f, %.1f\n", max(RectangleA, RectangleB).getWidth(),
         max(RectangleA, RectangleB).getHeight());
     System.out.println("========================");

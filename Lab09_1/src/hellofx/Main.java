@@ -24,18 +24,19 @@ public class Main extends Application {
 
         HBox topPane = new HBox();
         topPane.setSpacing(20);
-        topPane.setPadding(new Insets(10));
-        Label lblLoanAmount = new Label("Loan Amount:", tfLoanAmount);
+        topPane.setPadding(new Insets(20));
+        Label lblLoanAmount = new Label("Loan Amount: ", tfLoanAmount);
         lblLoanAmount.setContentDisplay(ContentDisplay.RIGHT);
 
-        Label lblNumOfYears = new Label("Number Of Years:", tfNumOfYears);
+        Label lblNumOfYears = new Label("Number Of Years: ", tfNumOfYears);
         lblNumOfYears.setContentDisplay(ContentDisplay.RIGHT);
 
         Button btShowTable = new Button("Show Table");
         btShowTable.setOnAction(handler);
         topPane.getChildren().addAll(lblLoanAmount, lblNumOfYears, btShowTable);
 
-        BorderPane borderPane = new BorderPane(textArea);
+        BorderPane borderPane = new BorderPane();
+        borderPane.setCenter(textArea);
         borderPane.setTop(topPane);
 
         primaryStage.setScene(new Scene(borderPane));
