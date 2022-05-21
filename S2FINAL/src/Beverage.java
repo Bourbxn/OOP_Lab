@@ -4,6 +4,11 @@ abstract class Beverage {
 
     public abstract int getCost();
 
+    public Beverage(){
+        this.price = 0;
+        this.name = "null";
+    }
+
     public Beverage(int price, String name){
         this.price = price;
         this.name = name;

@@ -1,6 +1,11 @@
-public class Coffee extends Beverage {
+public class Coffee extends Beverage implements Time{
     private String roast;
     private String coffeeBean;
+
+    public Coffee(){
+        this.roast = "null";
+        this.coffeeBean = "null";
+    }
 
     public Coffee(int price, String name, String roast, String coffeeBean) {
         super(price, name);
@@ -32,5 +37,10 @@ public class Coffee extends Beverage {
     @Override
     public int getCost() {
         return (int)(super.getPrice()*0.75);
+    }
+
+    @Override
+    public String timeToSell() {
+        return "10.00-20.00";
     }
 }
