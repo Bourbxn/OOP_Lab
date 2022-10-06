@@ -5,7 +5,6 @@
 Object Oriented Programming (01076105) Computer Engineering, KMITL
 <br>
 
-## Content
 - Introduction to Computers, Programs and Java Lab 1
 - Elementary Programming Lab 1
 - Selections [Lab 2](https://github.com/Bourbxn/oop-lab/tree/main/lab-2)
